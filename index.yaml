@@ -1,0 +1,115 @@
+apiVersion: v1
+entries:
+  echo:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.509976474Z"
+    description: A Helm chart for a simple echo server
+    digest: a289e3c2c1e23fa01f3d82e738d1d717b5e0ee3b2b1bd3c00713ac44f3d7ec05
+    home: https://github.com/jmalloc/echo-server
+    keywords:
+    - echo
+    - server
+    - http
+    maintainers:
+    - email: danielrichter@posteo.de
+      name: Daniel Richter
+    name: echo
+    sources:
+    - https://github.com/jmalloc/echo-server
+    type: application
+    urls:
+    - echo-1.0.0.tgz
+    version: 1.0.0
+  instrumented-app:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.511651774Z"
+    description: A Helm Chart to deploy a simple app that exposes prometheus metrics
+    digest: cc5f7756948c53e5790bd972374c65f41d7b09e891963a49fbf77a5876492555
+    name: instrumented-app
+    type: application
+    urls:
+    - instrumented-app-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.511409774Z"
+    description: A Helm Chart to deploy a simple app that exposes prometheus metrics
+    digest: 2a069e3a2238bfa251aeb354fcdc3e680f0b1e1bf46ceefeb07423b5d6f32822
+    name: instrumented-app
+    type: application
+    urls:
+    - instrumented-app-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.511160074Z"
+    description: A Helm Chart to deploy a simple app that exposes prometheus metrics
+    digest: 5be54df5ff4b1bb9e4fbd2db3649050b765d7f7a0e1034b795e5c1d4f7aa33b6
+    name: instrumented-app
+    type: application
+    urls:
+    - instrumented-app-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.510927074Z"
+    description: A Helm Chart to deploy a simple app that exposes prometheus metrics
+    digest: 7bf19c81625cf7554f757e67e8d5df3aa5021471cd3ccafad898efb6c243d9b5
+    name: instrumented-app
+    type: application
+    urls:
+    - instrumented-app-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.510186674Z"
+    description: A Helm Chart to deploy a simple app that exposes prometheus metrics
+    digest: 2b64f884fabe298388953f4351a65366521eb72bb909cce9e2c263985c40236d
+    name: instrumented-app
+    type: application
+    urls:
+    - instrumented-app-1.0.0.tgz
+    version: 1.0.0
+  prometheus:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-25T14:22:00.512021774Z"
+    description: A Helm chart to deploy a monitoring stack using the prometheus-operator
+    digest: 9d7473fd8cd83c8dedd9dc28a5810df1630e00f5e9a95c92a2b809308ba191b7
+    home: https://github.com/danielr1996-k8s/charts/prometheus-operator
+    keywords:
+    - prometheus
+    - operator
+    maintainers:
+    - email: danielrichter@posteo.de
+      name: Daniel Richter
+    name: prometheus
+    sources:
+    - https://github.com/danielr1996-k8s/charts/prometheus-operator
+    type: application
+    urls:
+    - prometheus-1.0.0.tgz
+    version: 1.0.0
+  prometheus-operator:
+  - apiVersion: v2
+    appVersion: 0.45.0
+    created: "2021-01-25T14:22:00.518176973Z"
+    description: A Helm chart for the prometheus operator
+    digest: b6e3532a0767a49406028915bc3e151532081fc8a7730383a1839cee0efcbda5
+    home: https://github.com/danielr1996-k8s/charts/prometheus-operator
+    keywords:
+    - prometheus
+    - operator
+    maintainers:
+    - email: danielrichter@posteo.de
+      name: Daniel Richter
+    name: prometheus-operator
+    sources:
+    - https://github.com/prometheus-operator/prometheus-operator
+    type: application
+    urls:
+    - prometheus-operator-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-01-25T14:22:00.509404174Z"
