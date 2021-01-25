@@ -20,6 +20,10 @@ jobs:
         uses: azure/setup-helm@v1
         with:
           version: v3.5.0
+      - name: Clean
+        run: |
+          rm -rf *.tgz
+          rm -rf index.yaml
       - name: Package charts
         run: |
           packages=$(ls charts | sed 's/\///g' | tr '\n' ',' | sed 's/.$//')
@@ -27,22 +31,14 @@ jobs:
           if [ $packagecount -lt 1 ]; then
             exit -1;
           elif [ $packagecount -eq 1 ]; then
-            eval "helm package charts/$packages --destination dist"
+            eval "helm package charts/$packages --destination ."
           else
-            eval "helm package charts/{$packages} --destination dist"
+            eval "helm package charts/{$packages} --destination ."
           fi
           git checkout gh-pages
-          rm -r packages
-          cp -r dist packages
-      - run: ls -la packages
       - name: Index charts
         run: |
-          rm index.yaml
-          helm repo index packages
-          mv packages/index.yaml index.yaml
-      - name: Move packages
-        run: mv packages/* .
-      - run: cat index.yaml
+          helm repo index .
       - name: Commit Changes
         run: |
           git add .
