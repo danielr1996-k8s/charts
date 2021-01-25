@@ -40,6 +40,8 @@ jobs:
           rm index.yaml
           helm repo index packages
           mv packages/index.yaml index.yaml
+      - name: Move packages
+        run: mv packages/* .
       - run: cat index.yaml
       - name: Commit Changes
         run: |
