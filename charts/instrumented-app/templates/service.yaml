@@ -4,6 +4,8 @@ metadata:
   name: example-app
   labels:
     app: example-app
+  annotations:
+    prometheus.io/scrape: 'true'
 spec:
   selector:
     app: example-app
