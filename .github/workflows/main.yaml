@@ -23,7 +23,7 @@ jobs:
       - name: Package charts
         run: |
           packages=$(ls charts | sed 's/\///g' | tr '\n' ',' | sed 's/.$//')
-          packagecount=$(echo $packages | wc -l)
+          packagecount=$(echo $packages | tr ',' '\n' | wc -l)
           if [ $packagecount -lt 1 ]; then
             exit -1;
           elif [ $packagecount -eq 1 ]; then
