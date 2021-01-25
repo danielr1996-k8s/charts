@@ -13,3 +13,12 @@ Add the Repository to Helm:
 Install echo-server:
 
     helm install my-charts/echo
+
+
+kubectl create namespace kube-ops
+kubectl label namespace default monitor=true
+helm upgrade --install prom-operator charts/prometheus-operator/ --namespace kube-ops
+helm upgrade --install prom-stack charts/prometheus-stack/ --namespace kube-ops
+helm upgrade --install app charts/instrumented-app/
+
+kubectl port-forward service/prometheus-operated -n kube-ops 80:9090

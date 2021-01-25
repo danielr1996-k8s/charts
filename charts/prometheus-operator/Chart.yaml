@@ -1,0 +1,15 @@
+apiVersion: v2
+name: prometheus-operator
+version: 1.0.0
+description: A Helm chart for the prometheus operator
+type: application
+keywords:
+  - prometheus
+  - operator
+home: https://github.com/danielr1996-k8s/charts/prometheus-operator
+sources:
+  - https://github.com/prometheus-operator/prometheus-operator
+maintainers:
+  - name: Daniel Richter
+    email: danielrichter@posteo.de
+appVersion: "0.45.0"
