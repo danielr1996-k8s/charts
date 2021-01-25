@@ -4,7 +4,7 @@ metadata:
   name: prometheus-servicemonitor
   namespace: {{ .Release.Namespace }}
   labels:
-    team: frontend
+    monitor: "true"
 spec:
   selector:
     matchLabels:
